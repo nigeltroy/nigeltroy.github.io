@@ -1,0 +1,73 @@
+---
+layout: ../layouts/Layout.astro
+title: Nigel - Resume
+---
+
+import { differenceInMonths } from 'date-fns';
+
+export const monthsAtCurrentJob = differenceInMonths(Date.now(), new Date(2023, 8, 18));
+export const monthSuffix = monthsAtCurrentJob > 1 ? 's' : '';
+
+## Education
+
+### University of Waterloo
+Sep 2018 - Aug 2023
+
+BMath Honors (**Major**: Computational Mathematics, **Minor**: Combinatorics and Optimization)
+
+## Work Experience
+
+### Replicant
+
+  #### Software Engineer II
+  Sep 2023 - Present ({monthsAtCurrentJob} month{monthSuffix})
+
+  #### Software Developer Intern
+  May 2022 - Aug 2023 (16 months)
+
+### Geotab
+    
+  #### Software Developer Intern
+  Sep 2021 - Apr 2022 (8 months)
+
+  - Implemented the Asset Monitoring page in Geotab's customer web portal, MyGeotab.
+    - Used Typescript and an in-house Geotab framework to create a responsive and accessible UI to display data of customer payloads and cargo.
+    - Facilitated final step of migration of over 25,000 telematics devices from Lat-Lon and Intendia customers to Geotab.
+  - Actively participated in product development and UI/UX meetings with different Geotab teams, managers and stakeholders as one of the first Lat-Lon post--migration team members.
+
+  #### Software Developer Intern
+  Jan 2021 - Apr 2021 (4 months)
+
+  - Developed pipeline in .NET Framework, Python and SQL Server to migrate historic user data from Lat-Lon to Geotab and initialize mappings to facilitate future live data flow.
+  - Owned codebase of an internal tool used to configure hardware units and send out orders to manufacturing.
+  - Implemented new features and looked over deployment of changes to dev, test and production servers.
+  - Created internal tools in .NET Framework and SQL Server for assigning sensors to hardware telematics devices and mailing customer orders to production.
+  - Optimized and refactored legacy code dealing with hardware-level EEPROM configuration changes for telematics devices.
+
+### HyAlto
+
+  #### Developer Intern
+  Apr 2020 - Aug 2020 (4 months)
+
+  - Optimized event processing and API pipelines by replacing existing software infrastructure with new workflow based on AWS Lambda, AWS API Gateway and Serverless that updated the central MySQL database and published AWS SNS topics.
+  - Developed event-driven sync project that tracks VM infrastructure changes and sends API requests via an asynchronous task queue using VMware API, Python and AMQP.
+  - Modified response payloads from Laravel endpoints to comply with newer HyAlto API requirements.
+  - Contributed to company investment pitches by writing MySQL and MongoDB database analysis tools to get metrics in Python.
+
+  #### Full Stack Web Developer Intern
+  Sep 2019 - Dec 2019 (4 months)
+
+  - Developed backend for a new historical VM usage feature in the HyAlto portal.
+    - Wrote Python scripts to get, process and store data via VMWare API calls, and deploy them using AWS Lambda.
+    - Cached data in Redis to immediately sync with the portal and stored it in MySQL and Postgres for older timeframes.
+  - Set up Laravel and CodeIgniter endpoints using MVC architecture and auth middleware, and tested them using Postman.
+  - Replaced existing endpoints and data processing infrastructure, and sped up the sync process significantly.
+
+### Delhi Pollution Control Committee
+
+  #### Data Analyst Intern
+  Jul 2018 - Aug 2018 (2 months)
+
+  - Analyzed datasets of various meteorological parameters, missing sensor data and frequency of dangerous days.
+  - Wrote a report on conclusions drawn from the data, which was used by the government to improve sensor conditions.
+  - Built an app in Python and Leaflet that facilitated easy viewing of pollution and meteorological data on a choropleth map.

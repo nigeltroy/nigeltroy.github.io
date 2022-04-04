@@ -1,0 +1,28 @@
+---
+layout: ../layouts/Layout.astro
+title: Nigel - About
+---
+
+import { Image } from 'astro:assets';
+import profilePicture from '../photo.png';
+
+<div class='flex flex-col gap-x-8 md:flex-row'>
+  <div class="flex-1">
+    Hi! I'm Nigel, a Software Engineer II at [Replicant](https://www.replicant.ai).
+
+    I graduated from the University of Waterloo in 2023 with a BMath Honors degree, majoring in
+    Computational Mathematics and minoring in Combinatorics and Optimization.
+
+    My hobbies include playing video games like League of Legends and Teamfight Tactics and working out at the gym.
+
+    We offer high school and early level university mathematics and computer science tutoring as well as internship and early career coaching. See the <a href="/tutoring">Tutoring</a> page for more info.
+  </div>
+  <div class="flex-1 self-center">
+    <Image
+      src={profilePicture}
+      alt="Me beside the sea smiling at you"
+      width="500"
+      height="600"
+    />
+  </div>
+</div>
