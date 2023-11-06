@@ -1,20 +1,10 @@
----
-const pathName = Astro.url.pathname;
----
-
 <header class="flex flex-col items-center justify-between gap-8 p-8 md:flex-row">
   <h1 class="text-center text-3xl font-semibold">
     <a href="/">Nigel Thomas Roy</a>
   </h1>
-  <div class="flex flex-wrap justify-center gap-x-8 text-lg underline underline-offset-2">
+  <div
+    class="flex flex-wrap justify-center gap-x-8 text-lg underline-offset-2 hover:[&_a]:underline">
     <a id="pages-resume" href="/resume">Resume</a>
     <a id="pages-tutoring" href="/tutoring">Tutoring</a>
   </div>
 </header>
-
-<script define:vars={{ pathName }}>
-const page = pathName.replaceAll('/', '');
-document
-  .getElementById(`pages-${page}`)
-  ?.classList.add('border-2', 'border-', 'border-neutral-800', 'dark:border-white');
-</script>
