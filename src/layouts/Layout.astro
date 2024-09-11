@@ -21,15 +21,15 @@ import ToggleThemeButton from '../components/ToggleThemeButton.astro';
     <title>{frontmatter.title}</title>
 
     <script is:inline>
-    const theme = localStorage.theme;
-    if (
-      theme === 'dark' ||
-      (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
-    ) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
+      const theme = localStorage.theme;
+      if (
+        theme === 'dark' ||
+        (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
     </script>
   </head>
 
@@ -39,7 +39,7 @@ import ToggleThemeButton from '../components/ToggleThemeButton.astro';
 
     <div
       id="page-container"
-      class="flex h-full w-full flex-col px-8 pt-4 md:min-w-[768px] md:max-w-4xl">
+      class="flex h-full w-full flex-col px-8 pt-4 md:min-w-[768px] md:max-w-5xl">
       <Header />
 
       <article
